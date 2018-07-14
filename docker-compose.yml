@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  mobilebuilder:
+    build: dev/mobilebuilder
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: sh ./dev/mobile.dev.sh
+    ports:
+      - 19000:19000
+      - 19001:19001
